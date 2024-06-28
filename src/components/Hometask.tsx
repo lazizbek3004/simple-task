@@ -30,9 +30,9 @@ const Hometask = () => {
 
 	const pop = () => {
 		
-		setDeleted(d => d = firstEl)
+		setDeleted(firstEl)
 
-		setArr(a => a = a.slice(1))
+		setArr(a.slice(1))
 
 
 	}
@@ -42,7 +42,7 @@ const Hometask = () => {
   return (
 	<div className="w-full h-[100dvh] flex flex-col justify-center items-center gap-[48px] ">
 		<div className="flex items-center">
-			<input value={newEl} onChange={(e) => setNewEl(n => n = e.target.value)} type="text" className="h-[36px] focus:outline-none border-[1px] border-gray-800 text-[20px] pl-[6px] rounded-[6px]" />
+			<input value={newEl} onChange={(e) => setNewEl(e.target.value)} type="text" className="h-[36px] focus:outline-none border-[1px] border-gray-800 text-[20px] pl-[6px] rounded-[6px]" />
 			<button onClick={() => push()} className="h-[36px] flex justify-center items-center p-[20px] bg-gray-500 text-white rounded-[6px] active:bg-gray-400 ">Push</button>
 		</div>
 		<div className="flex gap-[48px] items-end">
